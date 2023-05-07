@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Emgwen Technical And Vocational College</title>
+    <link rel="apple-touch-icon" sizes="57x57" href="fav/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="fav/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="fav/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="fav/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="fav/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="fav/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="fav/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="fav/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="fav/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="fav/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="fav/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="fav/favicon-16x16.png">
+    <link rel="manifest" href="fav/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="fav/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="assets/fontawesome-free-6.3.0-web/css/all.css">
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        html{
+            scroll-behavior: smooth;
+            font-family: 'Inter';
+        }
+        p{
+            padding: 6px 0;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            z-index: 1;
+        }
+
+        .academics-dropdown:hover .dropdown-content {
+            display: flex;
+            flex-direction: column;
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="bg-primary-green py-2">
+            <div class="container mx-auto lg:flex lg:justify-between text-sm items-center text-white">
+                <div class="items-center hidden lg:flex">
+                    <a href="#" class="px-2"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="px-2"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="px-2"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="px-2"><i class="fab fa-youtube"></i></a>
+                </div>
+
+                <div class="flex items-center justify-between">
+                    <a href="tel:+254711222345" class="px-2">
+                        <i class="fab fa-whatsapp"></i>
+                        <span class="text-sm">(+254) 711 222 345</span>
+                    </a>
+                    <a href="mailto:info@emgwentvc.ac.ke" class="px-2">
+                        <i class="fas fa-envelope md:text-[.75rem]"></i>
+                        <span class="text-sm">info@emgwentvc.ac.ke</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-primary-gray">
+            <div class="grid py-2 lg:py-0 px-3 lg:px-0 lg:flex lg:justify-between container mx-auto items-center">
+                <div class="flex items-center py-2">
+                    <a href="index.html" class="flex items-center">
+                        <img src="images/emg_logo_2.png" class="h-8 lg:h-10 rounded-circle">
+                        <h1 class="text-xl lg:text-2xl font-bold text-white">EMGWEN TECHNICAL</h1>
+                    </a>
+                    
+
+                    <div onclick="toggleNav()" class="ml-auto lg:hidden text-white cursor-pointer">
+                        <span id="close-show-icon" class="fas text-2xl fa-bars"></span>
+                    </div>
+                </div>
+                <div id="nav-links" class="hidden grid lg:flex flex-col lg:flex-row lg:items-center text-left">
+                    <a href="index.html" class="text-white font-semibold text-lg hover:text-orange-500 ml-4 py-2 lg:py-4 border-b-2 border-transparent hover:border-orange-500">Home</a>
+                    <a href="about.html" class="font-semibold text-lg text-orange-500 ml-4 py-2 lg:py-4 border-b-2 border-transparent hover:border-orange-500">About</a>
+                    
+                    <a href="academics.html" class="academics-dropdown text-white font-semibold text-lg hover:text-orange-500 ml-4 py-2 lg:py-4
+                    border-b-2 border-transparent relative inline-block hover:border-orange-500 cursor-pointer">
+                        Academics
+                        
+                        <!-- <div class="dropdown-content bg-primary-gray border min-w-[250px] mt-3 p-2 text-white text-sm">
+                            <a href="#" class="inline-block p-2 hover:text-orange-500"><i class="fas fa-chevron-right mr-2"></i>Agricultural Department </a>
+                            <a href="#" class="inline-block p-2 hover:text-orange-500"><i class="fas fa-chevron-right mr-2"></i>Business Department </a>
+                            <a href="#" class="inline-block p-2 hover:text-orange-500"><i class="fas fa-chevron-right mr-2"></i>ICT Department </a>
+                        </div> -->
+
+                    </a>
+                    
+                    <a href="#" class="text-white font-semibold text-lg hover:text-orange-500 ml-4 py-2 lg:py-4 border-b-2 border-transparent hover:border-orange-500">Students</a>
+                    <a href="contact.html" class="text-white font-semibold text-lg hover:text-orange-500 ml-4 py-2 lg:py-4 border-b-2 border-transparent hover:border-orange-500">Contact</a>
+                    <a href="apply.html" class="text-white font-semibold text-base hover:outline focus:outline
+                    bg-orange-400 hover:bg-orange-500 rounded-full px-3 py-2 lg:py-1 ml-4 mt-3 lg:mt-0">Apply Now</a>
+                </div>
+            </div>
+        </div>
+
+    </nav>
+
+
+    <main class="min-h-[800px]">
+
+        <section class="container mx-auto px-3 mt-4 py-5 bg-yellow-100 rounded">
+            <h1 class="text-2xl font-bold text-center">ABOUT US</h1>
+        </section>
+
+        <section class="container mx-auto mt-4 grid gap-4 lg:flex">
+
+            <div data-aos="fade-up" class="shrink-0 lg:w-[30%] shadow border-b-2 border-primary-green">
+                <img src="./fav/android-icon-192x192.png" alt="Emgwen TVC Logo" srcset=""
+                class="md:w-full mx-auto">
+            </div>
+            <div data-aos="fade-up" class="flex-grow md:ml-4 py-3 px-2 md:px-4 md:text-lg shadow">
+                <div class="font-bold text-3xl">Who We Are</div>
+                <div class="border-b-2 border-primary-green pb-3">
+                    <p>Emgwen Technical and Vocational College is a leading institution located in Kilibwoni Area in Nandi County. It is fully funded by the National Government Constituency Fund.</p>
+                    <p>Our college is dedicated to providing quality education and skills training to our students, equipping them with the necessary skills and knowledge to succeed in their chosen careers. We offer a range of courses in various fields, including Engineering, Business, Information Technology, Hospitality, and Agriculture.</p>
+                    <p>At Emgwen Technical and Vocational College, we pride ourselves on our highly qualified and experienced faculty, who are committed to ensuring that our students receive the best possible education. We also provide state-of-the-art facilities and equipment to enhance the learning experience for our students.</p>
+                </div>
+
+                <div class="font-bold text-3xl mt-4">Our Core Value</div>
+                <div class="border-b-2 border-primary-green pb-3">
+                    <h1>Our Core Values at Emgwen TVC are:</h1>
+                    <ul class="list-inside list-[square]">
+                        <li>Equity</li>
+                        <li>Honest</li>
+                        <li>Accountability</li>
+                        <li>Transparency</li>
+                    </ul>
+                </div>
+
+                <div class="font-bold text-3xl mt-4">Background History</div>
+                <div class="border-b-2 border-primary-green pb-3">
+                    <p>Emgwen Technical and Vocational College was started in 2020. This came after the parliamentary act that propose that every Constituency should have a technical college.</p>
+                    <p>President William Ruto, who was then a Deputy President at that time opened the fist tuition block in February 2021. Students was then enrolled to take various courses.</p>
+                    <p>Over the time, the institution has grown. National Government as issued funds throughout and with good governance of the funds by Emgwen CDF Committee, it has ensure the 
+                        institution remains at the front to ensure many youths achieve their dreams.
+                    </p>
+                </div>
+                
+            </div>
+
+        </section>
+
+    </main>
+    
+    
+    <footer class="mt-4 text-white bg-primary-gray">
+
+            <div class="container mx-auto px-3 md:px-0 py-4 grid gap-2 md:grid-cols-2 lg:grid-cols-3">
+                
+                <div>
+                    <h2 class="pb-2 border-b-2 border-primary-green font-semibold text-lg">Address</h2>
+                    <address data-aos="fade-up">
+                        <div>Emgwen Technical <br>And Vocational College</div>
+                        <div>PO Box 1212 - 30300</div>
+                        <div>Kapsabet</div>
+
+                        <a href="#" class="mt-4">Phone: +254 716 171 717</a>
+                    </address>
+                </div>
+                
+                <div data-aos="fade-up">
+                    <h2 class="pb-2 border-b-2 border-primary-green font-semibold text-lg">Important Links</h2>
+                    <div class="flex flex-col mt-2">
+                        <a href="#" class="hover:text-orange-500"><i class="fas fa-chevron-right mr-2 text-sm"></i>Home</a>
+                        <a href="#" class="hover:text-orange-500"><i class="fas fa-chevron-right mr-2 text-sm"></i>About Us</a>
+                        <a href="#" class="hover:text-orange-500"><i class="fas fa-chevron-right mr-2 text-sm"></i>Student Portal</a>
+                        <a href="#" class="hover:text-orange-500"><i class="fas fa-chevron-right mr-2 text-sm"></i>Staff Portal</a>
+                        <a href="#" class="hover:text-orange-500"><i class="fas fa-chevron-right mr-2 text-sm"></i>Contact Us</a>
+                        <a href="#" class="hover:text-orange-500"><i class="fas fa-chevron-right mr-2 text-sm"></i>Privacy Policies</a>
+                    </div>
+                </div>
+                <div data-aos="fade-up">
+                    <h2 class="pb-2 border-b-2 border-primary-green font-semibold text-lg">Social Links</h2>
+                    <div class="flex flex-col mt-2">
+                        <a href="#" class="hover:text-orange-500"><i class="fab fa-facebook mr-2 text-sm"></i>Emgwen TVC</a>
+                        <a href="#" class="hover:text-orange-500"><i class="fab fa-twitter mr-2 text-sm"></i>@emgwentvc</a>
+                        <a href="#" class="hover:text-orange-500"><i class="fab fa-instagram mr-2 text-sm"></i>@emgwentvc</a>
+                        <a href="#" class="hover:text-orange-500"><i class="fab fa-youtube mr-2 text-sm"></i>@emgwentvc</a>
+                        <a href="#" class="hover:text-orange-500"><i class="fab fa-tiktok mr-2 text-sm"></i>@emgwentvc</a>
+                    </div>
+                </div>
+                
+            </div>
+
+
+            <div class="bg-black text-white text-sm text-center py-2">
+                Titus Tum &copy; 2023
+            </div>
+
+    </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true
+        });
+
+        function toggleNav(){
+            document.getElementById('nav-links').classList.toggle('hidden')
+            let barsIcon = document.getElementById('close-show-icon')
+            let navLinks = document.getElementById('nav-links')
+
+            if (navLinks.classList.contains('hidden')) {
+                barsIcon.classList.remove('fa-times')
+                barsIcon.classList.add('fa-bars')
+            } else {
+                barsIcon.classList.remove('fa-bars')
+                barsIcon.classList.add('fa-times')
+            }
+        }
+
+
+    </script>
+</body>
+</html>
